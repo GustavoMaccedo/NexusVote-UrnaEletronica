@@ -42,6 +42,12 @@ embarcados, Linux ou o tema de votação eletrônica na faculdade.
 Foto do terminal: display, teclado matricial 4x4 e teclas BRANCO, CORRIGE e
 CONFIRMA. O software deste repositório segue esse arranjo de teclas.
 
+Montei esse terminal em 2018, no meu TCC. Anos depois, em 2025, resolvi
+atualizar o projeto: refiz o núcleo, o software do Pi e a impressão do
+boletim. Este ano incluí o voto para as duas vagas de senador, como manda a
+lei vigente. Cada eleitor vota duas vezes para o cargo, e repetir o mesmo
+número anula o segundo voto. O código trata exatamente essa regra.
+
 ## Aviso importante
 
 Isto é um protótipo educacional de laboratório. Eleição, eleitores e
