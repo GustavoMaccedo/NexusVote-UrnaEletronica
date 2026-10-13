@@ -21,8 +21,8 @@ sistema reage a queda de energia e como provar depois que nada foi alterado.
 
 Comecei em 2018 pelo núcleo em C++14, que era o C++ da época, com as
 regras, os estados da sessão, o journal de votos e a apuração. Por cima dele
-escrevi um terminal em C++ (`urna-pi`) que lê o teclado e imprime o boletim.
-A parte de hardware ficou em Rust: leitura do teclado matricial via evdev,
+escrevi o terminal em C++ que lê o teclado e imprime o boletim (o `urna-pi`
+de hoje). A parte de hardware ficou em Rust: leitura do teclado matricial via evdev,
 som via ALSA e piezo, driver ESC/POS cru para a impressora térmica e leitura
 de energia e relógio via sysfs. O display HDMI roda uma interface em Qt.
 
@@ -123,7 +123,8 @@ sudo bash scripts/test_hw_real.sh   # tudo PASS = pronto para votar
 - `rust/crates/nv-input-bridge/` - ponte evdev para FIFO
 - `rust/crates/nv-power-daemon/` - vigia de energia e relógio
 - `rust/crates/nv-secure-core/` + `nv-secure-ffi/` - journal selado e PIN do mesário
-- `overlays/` - device tree do teclado 4x4 - `systemd/` - serviços do terminal
+- `overlays/` - device tree do teclado 4x4
+- `systemd/` - serviços do terminal
 - `assets/sounds/` - sons de confirma e fim (WAV)
 - `scripts/` - build, testes e provisionamento do Pi
 - `tools/` - verificador independente em Python e utilidades
