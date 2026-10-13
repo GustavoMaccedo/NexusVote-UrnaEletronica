@@ -35,6 +35,13 @@ de bordo (`hw-events.jsonl`) virou meu melhor amigo na hora de depurar.
 Resolvi disponibilizar o código-fonte para quem estiver estudando sistemas
 embarcados, Linux ou o tema de votação eletrônica na faculdade.
 
+## O protótipo físico
+
+![Foto do protótipo físico](imgexp/urna-prototipo.jpg)
+
+Foto do terminal: display, teclado matricial 4x4 e teclas BRANCO, CORRIGE e
+CONFIRMA. O software deste repositório segue esse arranjo de teclas.
+
 ## Aviso importante
 
 Isto é um protótipo educacional de laboratório. Eleição, eleitores e
