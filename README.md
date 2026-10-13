@@ -7,7 +7,7 @@
 
 ## O projeto
 
-Meu nome é Gustavo Maccedo, estudante de Engenharia de Software na UnB
+Meu nome é Gustavo Maccedo, bacharel em Engenharia de Software pela UnB
 (Universidade de Brasilia). Escolhi como tema do meu TCC construir uma urna
 eletrônica experimental do zero: hardware dedicado rodando Linux, teclado
 físico, impressão do boletim em papel e um núcleo de votação com auditoria.
@@ -19,12 +19,16 @@ sistema reage a queda de energia e como provar depois que nada foi alterado.
 
 ## Como foi fazer
 
-Comecei pelo núcleo em C++20, que concentra as regras, os estados da sessão,
-o journal de votos e a apuração. Por cima dele escrevi um terminal em C++
-(`urna-pi`) que lê o teclado e imprime o boletim. A parte de hardware ficou
-em Rust: leitura do teclado matricial via evdev, som via ALSA e piezo, driver
-ESC/POS cru para a impressora térmica e leitura de energia e relógio via
-sysfs. O display HDMI roda uma interface em Qt.
+Comecei em 2018 pelo núcleo em C++14, que era o C++ da época, com as
+regras, os estados da sessão, o journal de votos e a apuração. Por cima dele
+escrevi um terminal em C++ (`urna-pi`) que lê o teclado e imprime o boletim.
+A parte de hardware ficou em Rust: leitura do teclado matricial via evdev,
+som via ALSA e piezo, driver ESC/POS cru para a impressora térmica e leitura
+de energia e relógio via sysfs. O display HDMI roda uma interface em Qt.
+
+Em 2025 resolvi atualizar o projeto todo: migrei o núcleo para C++20,
+troquei a placa pelo Raspberry Pi 4B e refiz impressão, sons e diário de
+bordo. Foi quase reescrever tudo, mas mantendo as ideias originais.
 
 A parte que mais me ensinou foi a integração no Raspberry Pi: subir o teclado
 matricial com device tree overlay, mapear os keycodes até a confirmação do
