@@ -1,5 +1,5 @@
 // Universidade de Brasilia (UnB) - Gustavo Maccedo - TCC
-//! PROTÓTIPO INDEPENDENTE — LABORATÓRIO. Sem validade eleitoral.
+//! PROTÓTIPO INDEPENDENTE - LABORATÓRIO. Sem validade eleitoral.
 
 #![forbid(unsafe_code)]
 #![warn(clippy::all)]

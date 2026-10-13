@@ -18,7 +18,7 @@ inline constexpr const char* kRulesProfile = "LAB-BR-EDU-v1";
 #endif
 inline constexpr const char* kSoftwareVersion = NEXUSVOTE_VERSION;
 inline constexpr const char* kNonOfficialBanner =
-    "PROTÓTIPO INDEPENDENTE — USO EXCLUSIVO EM LABORATÓRIO — NÃO OFICIAL";
+    "PROTÓTIPO INDEPENDENTE - USO EXCLUSIVO EM LABORATÓRIO - NÃO OFICIAL";
 
 enum class VoteKind { Candidate, Party, Blank, Null };
 

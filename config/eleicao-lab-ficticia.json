@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "election_id": "LAB-BR-001",
-  "display_name": "Eleição LAB fictícia de treinamento — cargos BR (NÃO OFICIAL, sem validade)",
+  "display_name": "Eleição LAB fictícia de treinamento - cargos BR (NÃO OFICIAL, sem validade)",
   "locale": "pt-BR",
   "rules_profile": "LAB-BR-EDU-v1",
   "legend_enabled": true,

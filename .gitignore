@@ -8,3 +8,5 @@ local.properties
 rust/target/
 docs/
 *.md
+*.pyc
+__pycache__/

@@ -93,7 +93,7 @@ int runOffice(nexusvote::VotingSession& session, nexusvote::ui::QtVotingWindow& 
 
 int main(int argc, char** argv) {
     if (argc < 3) {
-        std::cerr << "PROTÓTIPO INDEPENDENTE — USO EXCLUSIVO EM LABORATÓRIO — NÃO OFICIAL\n"
+        std::cerr << "PROTÓTIPO INDEPENDENTE - USO EXCLUSIVO EM LABORATÓRIO - NÃO OFICIAL\n"
                   << "uso: nexusvote-qt <config.json> <workdir> [outdir]\n";
         return 2;
     }

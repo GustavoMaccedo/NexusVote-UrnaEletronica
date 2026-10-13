@@ -1,5 +1,5 @@
 // Universidade de Brasilia (UnB) - Gustavo Maccedo - TCC
-//! Sigilo de conteúdo: `data` pode ser selado (AES-GCM) — neste protótipo
+//! Sigilo de conteúdo: `data` pode ser selado (AES-GCM) - neste protótipo
 
 use crate::canonical_json::to_canonical_bytes;
 use crate::crypto::{self, Keypair};

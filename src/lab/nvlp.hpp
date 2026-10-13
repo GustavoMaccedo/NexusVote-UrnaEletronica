@@ -1,7 +1,7 @@
 // Universidade de Brasilia (UnB) - Gustavo Maccedo - TCC
 #pragma once
 
-// NVLP v1 — enquadramento do protocolo de laboratório (espelho de LabProtocol.kt).
+// NVLP v1 - enquadramento do protocolo de laboratório (espelho de LabProtocol.kt).
 
 #include <cstddef>
 #include <cstdint>

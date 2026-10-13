@@ -35,7 +35,7 @@ pub fn printer_path() -> String {
 
 fn latin1_byte(c: char) -> u8 {
     match c {
-        '—' | '–' => return b'-',
+        '-' | '-' => return b'-',
         '“' | '”' => return b'"',
         '‘' | '’' => return b'\'',
         _ => {}
@@ -167,6 +167,6 @@ mod tests {
     #[test]
     fn latin1_ptbr() {
         assert_eq!(latin1("ACAO"), b"ACAO");
-        assert_eq!(latin1_byte('—'), b'-');
+        assert_eq!(latin1_byte('-'), b'-');
     }
 }

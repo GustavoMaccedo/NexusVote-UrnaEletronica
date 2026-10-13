@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "election_id": "LAB-2026-001",
-  "display_name": "Eleição FICTÍCIA de laboratório — Cargos Municipais Demo (NÃO OFICIAL)",
+  "display_name": "Eleição FICTÍCIA de laboratório - Cargos Municipais Demo (NÃO OFICIAL)",
   "locale": "pt-BR",
   "rules_profile": "LAB-BR-EDU-v1",
   "legend_enabled": true,

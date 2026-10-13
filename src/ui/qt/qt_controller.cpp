@@ -7,7 +7,7 @@ namespace nexusvote::ui {
 ViewMessages buildOfficeView(const std::string& office_id, const std::string& office_title,
                              const std::string& digits, bool blank, const BallotPreview& pv) {
     ViewMessages m;
-    m.title = "Cargo: " + office_id + " — " + office_title;
+    m.title = "Cargo: " + office_id + " - " + office_title;
     m.typed_digits = blank ? "(BRANCO)" : digits;
     m.preview_text = pv.message_pt;
     m.status_text = "BRANCO=branco C=CORRIGE ENTER=confirma (após revisão)";

@@ -30,7 +30,7 @@ def write_export(d: Path, records, boletim_offices):
         json.dumps(
             {
                 "schema_version": 1,
-                "banner": "NÃO OFICIAL — BOLETIM DE DEMONSTRAÇÃO",
+                "banner": "NÃO OFICIAL - BOLETIM DE DEMONSTRAÇÃO",
                 "offices": boletim_offices,
             }
         ),

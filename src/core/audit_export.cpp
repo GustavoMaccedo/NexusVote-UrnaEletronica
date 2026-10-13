@@ -97,7 +97,7 @@ std::string buildZeroReport(const std::string& session_id, const std::string& op
                             const std::string& config_sha) {
     std::ostringstream o;
     o << "{\"schema_version\":1,\"report\":\"zeresima-didatica\",\"banner\":\""
-      << "PROTÓTIPO INDEPENDENTE — USO EXCLUSIVO EM LABORATÓRIO — NÃO OFICIAL"
+      << "PROTÓTIPO INDEPENDENTE - USO EXCLUSIVO EM LABORATÓRIO - NÃO OFICIAL"
       << "\",\"lab_session_id\":\"" << minijson::escape(session_id) << "\",\"opened_at\":\""
       << minijson::escape(opened_at) << "\",\"config_sha256\":\"" << config_sha
       << "\",\"totals\":\"all_zero\"}";
@@ -130,7 +130,7 @@ bool exportAllArtifactsFull(const ElectionConfig& cfg, const std::string& sessio
     }
     std::ostringstream b;
     b << "{\"schema_version\":1,\"banner\":\""
-      << "NÃO OFICIAL — BOLETIM DE DEMONSTRAÇÃO. Sem validade eleitoral.\","
+      << "NÃO OFICIAL - BOLETIM DE DEMONSTRAÇÃO. Sem validade eleitoral.\","
       << "\"lab_session_id\":\"" << minijson::escape(session_id) << "\",\"software\":\"nexusvote "
       << kSoftwareVersion << "\",\"rules_profile\":\"" << minijson::escape(cfg.rules_profile)
       << "\",\"opened_at\":\"" << minijson::escape(opened_at) << "\",\"closed_at\":\""

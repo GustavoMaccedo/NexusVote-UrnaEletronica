@@ -283,7 +283,7 @@ int main(int argc, char** argv) {
     std::signal(SIGINT, onSig);
     std::signal(SIGTERM, onSig);
     std::cout << "==============================================================\n"
-              << "PROTÓTIPO INDEPENDENTE — USO EXCLUSIVO EM LABORATÓRIO — NÃO OFICIAL\n"
+              << "PROTÓTIPO INDEPENDENTE - USO EXCLUSIVO EM LABORATÓRIO - NÃO OFICIAL\n"
               << "NexusVote " << nexusvote::kSoftwareVersion << " urna-pi (Pi 4B).\n"
               << "==============================================================\n";
     if (argc < 2) {
@@ -337,7 +337,7 @@ int main(int argc, char** argv) {
         auto pr = nexusvote::paper::printRaw(nexusvote::paper::printerPath(), job);
         hwLog(workdir, pr.ok() ? "print_ok" : "print_fail", "zeresima: " + pr.detail);
         std::cout << (pr.ok() ? "Zerésima impressa.\n"
-                              : "Zerésima NÃO impressa (" + pr.detail + ") — segue QR/ata.\n");
+                              : "Zerésima NÃO impressa (" + pr.detail + ") - segue QR/ata.\n");
     }
 
     KeySource ks;
@@ -470,7 +470,7 @@ int main(int argc, char** argv) {
         auto pr = nexusvote::paper::printRaw(nexusvote::paper::printerPath(), job);
         hwLog(workdir, pr.ok() ? "print_ok" : "print_fail", "BU: " + pr.detail);
         std::cout << (pr.ok() ? "BU impresso (via 1; conferir legibilidade p/ vias 2-5).\n"
-                              : "BU NÃO impresso (" + pr.detail + ") — QR/ata.\n");
+                              : "BU NÃO impresso (" + pr.detail + ") - QR/ata.\n");
     }
     return 0;
 }

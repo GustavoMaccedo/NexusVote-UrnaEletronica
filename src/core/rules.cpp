@@ -89,7 +89,7 @@ BallotPreview classifyBallot(const ElectionConfig& cfg, const ElectionRules& rul
         }
     }
     pv.type = PreviewType::Null;
-    pv.message_pt = "NÚMERO NÃO CORRESPONDE A CANDIDATO — o voto será NULO se confirmado.";
+    pv.message_pt = "NÚMERO NÃO CORRESPONDE A CANDIDATO - o voto será NULO se confirmado.";
     return pv;
 }
 

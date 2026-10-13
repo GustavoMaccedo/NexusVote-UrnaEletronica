@@ -86,7 +86,7 @@ QtVotingWindow::QtVotingWindow(QWidget* parent) : QMainWindow(parent) {
     root->addLayout(row);
     root->addWidget(status_);
     setCentralWidget(central);
-    setWindowTitle("NexusVote Lab — NÃO OFICIAL");
+    setWindowTitle("NexusVote Lab - NÃO OFICIAL");
     resize(420, 640);
 }
 

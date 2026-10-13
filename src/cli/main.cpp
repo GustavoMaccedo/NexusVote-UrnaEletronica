@@ -1,5 +1,5 @@
 // Universidade de Brasilia (UnB) - Gustavo Maccedo - TCC
-// NexusVote — CLI de laboratório (NÃO é interface de eleitor oficial).
+// NexusVote - CLI de laboratório (NÃO é interface de eleitor oficial).
 // Banner NÃO OFICIAL exibido em toda execução.
 
 #include <cstdio>
@@ -34,7 +34,7 @@ std::string exeBuildInfoPath(const std::string& argv0) {
 
 void banner() {
     std::cout << "==============================================================\n"
-              << "PROTÓTIPO INDEPENDENTE — USO EXCLUSIVO EM LABORATÓRIO — NÃO OFICIAL\n"
+              << "PROTÓTIPO INDEPENDENTE - USO EXCLUSIVO EM LABORATÓRIO - NÃO OFICIAL\n"
               << "NexusVote " << nexusvote::kSoftwareVersion
               << " (núcleo C++). Eleição e candidatos fictícios.\n"
               << "==============================================================\n";
