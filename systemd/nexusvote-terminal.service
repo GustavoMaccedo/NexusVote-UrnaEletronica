@@ -1,0 +1,23 @@
+[Unit]
+Description=NexusVote Lab terminal texto (urna-pi, teclado matricial)
+After=network.target sound.target
+Requires=dev-input-nv\x2dkeypad.device
+After=dev-input-nv\x2dkeypad.device
+
+[Service]
+Type=simple
+User=urna
+Group=urna
+SupplementaryGroups=audio gpio lp input dialout
+Environment=NEXUSVOTE_CONFIG=/opt/nexusvote-lab/config/eleicao-lab-ficticia.json
+Environment=NV_KEYPAD_DEV=/dev/input/nv-keypad
+Environment=NV_PRINTER_DEV=/dev/usb/lp0
+ExecStart=/opt/nexusvote-lab/urna-pi /var/lib/nexusvote-lab/work
+Restart=always
+RestartSec=2
+StandardInput=tty
+StandardOutput=journal
+TTYPath=/dev/tty1
+
+[Install]
+WantedBy=multi-user.target

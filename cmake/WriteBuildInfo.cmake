@@ -1,0 +1,12 @@
+# Universidade de Brasilia (UnB) - Gustavo Maccedo - TCC
+file(SHA256 "${BIN_CLI}" CLI_SHA)
+file(WRITE "${OUT}" "{\n")
+file(APPEND "${OUT}" "  \"schema_version\": 1,\n")
+file(APPEND "${OUT}" "  \"software\": \"nexusvote\",\n")
+file(APPEND "${OUT}" "  \"software_version\": \"${VERSION}\",\n")
+file(APPEND "${OUT}" "  \"compiler\": \"${COMPILER}\",\n")
+file(APPEND "${OUT}" "  \"build_type\": \"${BUILD_TYPE}\",\n")
+file(APPEND "${OUT}" "  \"lab_test_mode\": \"${LAB_TEST_MODE}\",\n")
+file(APPEND "${OUT}" "  \"with_qt\": \"${WITH_QT}\",\n")
+file(APPEND "${OUT}" "  \"binary_sha256\": \"${CLI_SHA}\"\n}\n")
+message(STATUS "build-info.json: ${OUT} sha=${CLI_SHA}")

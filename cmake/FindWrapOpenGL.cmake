@@ -1,0 +1,15 @@
+# Universidade de Brasilia (UnB) - Gustavo Maccedo - TCC
+
+if(TARGET WrapOpenGL::WrapOpenGL)
+    set(WrapOpenGL_FOUND ON)
+    return()
+endif()
+set(WrapOpenGL_FOUND OFF)
+find_package(OpenGL COMPONENTS OpenGL)
+if(OpenGL_FOUND)
+    set(WrapOpenGL_FOUND ON)
+    add_library(WrapOpenGL::WrapOpenGL INTERFACE IMPORTED)
+    target_link_libraries(WrapOpenGL::WrapOpenGL INTERFACE OpenGL::OpenGL)
+endif()
+include(FindPackageHandleStandardArgs)
+find_package_handle_standard_args(WrapOpenGL DEFAULT_MSG WrapOpenGL_FOUND)

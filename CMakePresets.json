@@ -1,0 +1,40 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "host-debug",
+      "displayName": "Host Debug (laboratório)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/host",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "LAB_TEST_MODE": "ON",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "arm64-release",
+      "displayName": "ARM64 Release (placa/bancada)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/arm64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "LAB_TEST_MODE": "ON",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "arm64-cross",
+      "displayName": "Cross x86_64 -> ARM64 (requer toolchain aarch64-linux-gnu)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/arm64-cross",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_CXX_COMPILER": "aarch64-linux-gnu-g++",
+        "CMAKE_C_COMPILER": "aarch64-linux-gnu-gcc",
+        "LAB_TEST_MODE": "ON",
+        "BUILD_TESTING": "OFF"
+      }
+    }
+  ]
+}

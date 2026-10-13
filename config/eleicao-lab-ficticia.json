@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "election_id": "LAB-BR-001",
+  "display_name": "Eleição LAB fictícia de treinamento — cargos BR (NÃO OFICIAL, sem validade)",
+  "locale": "pt-BR",
+  "rules_profile": "LAB-BR-EDU-v1",
+  "legend_enabled": true,
+  "offices": [
+    {
+      "office_id": "vereador",
+      "title": "Vereador",
+      "number_length": 5,
+      "proportional": true,
+      "order": 0
+    },
+    {
+      "office_id": "prefeito",
+      "title": "Prefeito",
+      "number_length": 2,
+      "proportional": false,
+      "order": 1
+    },
+    {
+      "office_id": "deputado_federal",
+      "title": "Deputado Federal",
+      "number_length": 4,
+      "proportional": true,
+      "order": 2
+    },
+    {
+      "office_id": "deputado_estadual",
+      "title": "Deputado Estadual",
+      "number_length": 5,
+      "proportional": true,
+      "order": 3
+    },
+    {
+      "office_id": "senador",
+      "title": "Senador",
+      "number_length": 3,
+      "proportional": false,
+      "order": 4,
+      "seats": 2
+    },
+    {
+      "office_id": "governador",
+      "title": "Governador",
+      "number_length": 2,
+      "proportional": false,
+      "order": 5
+    },
+    {
+      "office_id": "presidente",
+      "title": "Presidente",
+      "number_length": 2,
+      "proportional": false,
+      "order": 6
+    }
+  ],
+  "parties": [
+    {
+      "party_number": "11",
+      "name": "Partido Aurora Fictício"
+    },
+    {
+      "party_number": "22",
+      "name": "Partido Brisa Fictícia"
+    },
+    {
+      "party_number": "33",
+      "name": "Partido Caju Fictício"
+    },
+    {
+      "party_number": "44",
+      "name": "Partido Duna Fictícia"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "v-amora",
+      "office_id": "vereador",
+      "number": "11111",
+      "name": "Amora Silva",
+      "party_number": "11",
+      "eligible": true
+    },
+    {
+      "candidate_id": "v-bento",
+      "office_id": "vereador",
+      "number": "11222",
+      "name": "Bento Praia",
+      "party_number": "11",
+      "eligible": true
+    },
+    {
+      "candidate_id": "v-clara",
+      "office_id": "vereador",
+      "number": "22333",
+      "name": "Clara Vento",
+      "party_number": "22",
+      "eligible": true
+    },
+    {
+      "candidate_id": "p-duarte",
+      "office_id": "prefeito",
+      "number": "11",
+      "name": "Duarte Lago",
+      "party_number": "11",
+      "eligible": true,
+      "running_mate": "Elisa Lagoa"
+    },
+    {
+      "candidate_id": "p-fabio",
+      "office_id": "prefeito",
+      "number": "22",
+      "name": "Fábio Serra",
+      "party_number": "22",
+      "eligible": true,
+      "running_mate": "Gilda Serra"
+    },
+    {
+      "candidate_id": "f-helena",
+      "office_id": "deputado_federal",
+      "number": "1111",
+      "name": "Helena Rio",
+      "party_number": "11",
+      "eligible": true
+    },
+    {
+      "candidate_id": "f-igor",
+      "office_id": "deputado_federal",
+      "number": "2222",
+      "name": "Igor Vale",
+      "party_number": "22",
+      "eligible": true
+    },
+    {
+      "candidate_id": "e-julia",
+      "office_id": "deputado_estadual",
+      "number": "33111",
+      "name": "Júlia Campo",
+      "party_number": "33",
+      "eligible": true
+    },
+    {
+      "candidate_id": "e-kaio",
+      "office_id": "deputado_estadual",
+      "number": "44222",
+      "name": "Kaio Monte",
+      "party_number": "44",
+      "eligible": true
+    },
+    {
+      "candidate_id": "s-lara",
+      "office_id": "senador",
+      "number": "111",
+      "name": "Lara Costa",
+      "party_number": "11",
+      "eligible": true,
+      "substitutes": [
+        "Mário Costa",
+        "Nina Costa"
+      ]
+    },
+    {
+      "candidate_id": "s-otavio",
+      "office_id": "senador",
+      "number": "222",
+      "name": "Otávio Porto",
+      "party_number": "22",
+      "eligible": true,
+      "substitutes": [
+        "Paula Porto",
+        "Rui Porto"
+      ]
+    },
+    {
+      "candidate_id": "g-sara",
+      "office_id": "governador",
+      "number": "33",
+      "name": "Sara Ilha",
+      "party_number": "33",
+      "eligible": true,
+      "running_mate": "Tadeu Ilha"
+    },
+    {
+      "candidate_id": "g-ugo",
+      "office_id": "governador",
+      "number": "44",
+      "name": "Ugo Prado",
+      "party_number": "44",
+      "eligible": true,
+      "running_mate": "Vera Prado"
+    },
+    {
+      "candidate_id": "r-wanda",
+      "office_id": "presidente",
+      "number": "11",
+      "name": "Wanda Céu",
+      "party_number": "11",
+      "eligible": true,
+      "running_mate": "Xande Céu"
+    },
+    {
+      "candidate_id": "r-yara",
+      "office_id": "presidente",
+      "number": "22",
+      "name": "Yara Solo",
+      "party_number": "22",
+      "eligible": true,
+      "running_mate": "Zeca Solo"
+    }
+  ],
+  "accessibility": {
+    "large_font_default": false,
+    "high_contrast_default": false,
+    "audio_feedback_default": true
+  },
+  "turn": 1
+}

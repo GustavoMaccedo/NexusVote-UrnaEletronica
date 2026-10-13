@@ -1,0 +1,23 @@
+[workspace]
+members = [
+  "crates/nv-secure-core",
+  "crates/nv-secure-ffi",
+  "crates/nv-hal",
+  "crates/nv-power-daemon",
+  "crates/nv-input-bridge",
+]
+resolver = "2"
+
+[workspace.package]
+version = "1.3.0-lab"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["NexusVote Lab"]
+repository = "https://example.invalid/nexusvote-lab"
+
+[profile.release]
+lto = true
+panic = "abort"
+strip = true
+opt-level = "z"
+codegen-units = 1

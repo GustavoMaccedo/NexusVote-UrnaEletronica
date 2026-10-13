@@ -1,0 +1,17 @@
+[Unit]
+Description=NexusVote Lab input bridge (evdev matricial -> fifo)
+After=network.target
+Requires=dev-input-nv\x2dkeypad.device
+After=dev-input-nv\x2dkeypad.device
+
+[Service]
+Type=simple
+User=urna
+Group=input
+Environment=NV_KEYPAD_DEV=/dev/input/nv-keypad
+ExecStart=/opt/nexusvote-lab/nv-input-bridge /var/lib/nexusvote-lab/work
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+# Universidade de Brasilia (UnB) - Gustavo Maccedo - TCC
+SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="*matrix-keypad*", SYMLINK+="input/nv-keypad"
+KERNEL=="nv-keypad", SYMLINK+="input/nv-keypad"
+SUBSYSTEM=="pwm*", PROGRAM="/bin/sh -c 'chown -R root:gpio /sys/class/pwm && chmod -R 770 /sys/class/pwm'", TAG+="systemd"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", MODE="0664", GROUP="lp"
+KERNEL=="usb/lp*", MODE="0660", GROUP="lp"

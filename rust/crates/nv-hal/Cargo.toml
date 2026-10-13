@@ -1,0 +1,19 @@
+[package]
+name = "nv-hal"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "HAL de hardware (Raspberry Pi 4/5 + Linux): GPIO, display, energia, teclado. PROTÓTIPO DE LABORATÓRIO."
+rust-version = "1.85"
+
+[lib]
+name = "nv_hal"
+crate-type = ["rlib"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+
+[dev-dependencies]
+proptest = "1.12"

@@ -1,0 +1,21 @@
+[Unit]
+Description=NexusVote Lab Qt kiosk HDMI (eglfs, sem X11)
+After=network.target sound.target systemd-udev-settle.service
+Wants=systemd-udev-settle.service
+
+[Service]
+Type=simple
+User=urna
+Group=urna
+SupplementaryGroups=audio gpio lp input video render
+Environment=QT_QPA_PLATFORM=eglfs
+Environment=QT_QPA_EGLFS_KMS_CONFIG=/opt/nexusvote-lab/eglfs-kms.json
+Environment=QT_QPA_HIDECURSOR=1
+Environment=QT_QPA_ENABLE_TERMINAL_KEYBOARD=0
+Environment=NEXUSVOTE_CONFIG=/opt/nexusvote-lab/config/eleicao-lab-ficticia.json
+ExecStart=/opt/nexusvote-lab/nexusvote-qt
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=graphical.target

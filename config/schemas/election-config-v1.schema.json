@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NexusVote election-config v1 (eleição fictícia de laboratório)",
+  "type": "object",
+  "required": ["schema_version", "election_id", "display_name", "offices", "candidates"],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "election_id": {"type": "string", "minLength": 1},
+    "display_name": {"type": "string", "minLength": 1},
+    "locale": {"type": "string", "default": "pt-BR"},
+    "rules_profile": {"type": "string", "default": "LAB-BR-EDU-v1"},
+    "legend_enabled": {"type": "boolean", "default": false},
+    "offices": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["office_id", "title", "number_length"],
+        "properties": {
+          "office_id": {"type": "string", "minLength": 1},
+          "title": {"type": "string", "minLength": 1},
+          "number_length": {"type": "integer", "minimum": 1, "maximum": 6},
+          "proportional": {"type": "boolean", "default": false},
+          "order": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "parties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["party_number", "name"],
+        "properties": {
+          "party_number": {"type": "string", "pattern": "^[0-9]{2}$"},
+          "name": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "candidates": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["candidate_id", "office_id", "number", "name", "party_number"],
+        "properties": {
+          "candidate_id": {"type": "string", "minLength": 1},
+          "office_id": {"type": "string", "minLength": 1},
+          "number": {"type": "string", "pattern": "^[0-9]{1,6}$"},
+          "name": {"type": "string", "minLength": 1},
+          "party_number": {"type": "string", "minLength": 1},
+          "eligible": {"type": "boolean", "default": true}
+        }
+      }
+    }
+  }
+}

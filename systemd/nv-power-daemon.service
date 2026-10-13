@@ -1,0 +1,16 @@
+[Unit]
+Description=NexusVote Lab power daemon (UPS/RTC + bordo)
+After=network.target
+
+[Service]
+Type=simple
+User=urna
+Group=urna
+ExecStart=/opt/nexusvote-lab/nv-power-daemon /var/lib/nexusvote-lab/work
+Restart=always
+RestartSec=5
+# exit 2 = QUIESCE (energia crítica): não reiniciar em loop, exige operador
+RestartPreventExitStatus=2
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+[package]
+name = "nv-secure-ffi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "FFI C ABI do canal seguro para o núcleo C++ (cdylib + staticlib). PROTÓTIPO DE LABORATÓRIO."
+rust-version = "1.85"
+
+[lib]
+name = "nv_secure_ffi"
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+nv-secure-core = { path = "../nv-secure-core" }
+serde_json = "1.0"
+zeroize = { version = "1.9", features = ["derive"] }

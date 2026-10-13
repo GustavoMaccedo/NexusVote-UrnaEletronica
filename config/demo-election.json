@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "election_id": "LAB-2026-001",
+  "display_name": "Eleição FICTÍCIA de laboratório — Cargos Municipais Demo (NÃO OFICIAL)",
+  "locale": "pt-BR",
+  "rules_profile": "LAB-BR-EDU-v1",
+  "legend_enabled": true,
+  "offices": [
+    {"office_id": "vereador", "title": "Vereador Fictício", "number_length": 5, "proportional": true, "order": 0},
+    {"office_id": "alcaide", "title": "Alcaide Fictício", "number_length": 2, "proportional": false, "order": 1}
+  ],
+  "parties": [
+    {"party_number": "11", "name": "Partido Aurora Fictício"},
+    {"party_number": "22", "name": "Partido Brisa Fictícia"}
+  ],
+  "candidates": [
+    {"candidate_id": "c-ada", "office_id": "vereador", "number": "11111", "name": "Ada Fictícia", "party_number": "11", "eligible": true},
+    {"candidate_id": "c-beto", "office_id": "vereador", "number": "11222", "name": "Beto Fictício", "party_number": "11", "eligible": true},
+    {"candidate_id": "c-celi", "office_id": "vereador", "number": "22333", "name": "Celi Fictícia", "party_number": "22", "eligible": true},
+    {"candidate_id": "c-duarte", "office_id": "alcaide", "number": "11", "name": "Duarte Fictício", "party_number": "11", "eligible": true},
+    {"candidate_id": "c-elisa", "office_id": "alcaide", "number": "22", "name": "Elisa Fictícia", "party_number": "22", "eligible": true}
+  ],
+  "accessibility": {"large_font_default": false, "high_contrast_default": false, "audio_feedback_default": false}
+}

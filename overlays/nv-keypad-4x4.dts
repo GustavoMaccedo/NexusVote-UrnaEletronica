@@ -1,0 +1,43 @@
+// Universidade de Brasilia (UnB) - Gustavo Maccedo - TCC
+/dts-v1/;
+/plugin/;
+/ {
+	compatible = "brcm,bcm2835";
+	fragment@0 {
+		target-path = "/";
+		__overlay__ {
+			urna_keypad: matrix-keypad {
+				compatible = "gpio-matrix-keypad";
+				debounce-delay-ms = <20>;
+				col-scan-delay-us = <10>;
+				linux,no-autorepeat;
+				pinctrl-names = "default";
+				pinctrl-0 = <&urna_keypad_pins>;
+				row-gpios = <&gpio 5 0
+					     &gpio 6 0
+					     &gpio 13 0
+					     &gpio 19 0>;
+				col-gpios = <&gpio 12 0
+					     &gpio 16 0
+					     &gpio 20 0
+					     &gpio 21 0>;
+				linux,keymap = <
+					0x00000002 0x00010003 0x00020004 0x0003001e
+					0x01000005 0x01010006 0x01020007 0x01030030
+					0x02000008 0x02010009 0x0202000a 0x0203002e
+					0x03000037 0x0301000b 0x03020062 0x03030020
+				>;
+			};
+		};
+	};
+	fragment@1 {
+		target = <&gpio>;
+		__overlay__ {
+			urna_keypad_pins: urna_keypad_pins {
+				brcm,pins = <5 6 13 19>;
+				brcm,function = <0>;
+				brcm,pull = <2>;
+			};
+		};
+	};
+};

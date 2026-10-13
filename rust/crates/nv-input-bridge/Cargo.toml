@@ -1,0 +1,15 @@
+[package]
+name = "nv-input-bridge"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Ponte teclado matricial evdev -> FIFO + hw-events (Pi 4B)."
+rust-version = "1.85"
+
+[[bin]]
+name = "nv-input-bridge"
+path = "src/main.rs"
+
+[dependencies]
+nv-hal = { path = "../nv-hal" }
+serde_json = "1.0"

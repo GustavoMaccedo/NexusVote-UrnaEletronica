@@ -1,0 +1,23 @@
+[Unit]
+Description=NexusVote Lab — vigia de energia/tempo do terminal (PROTOTIPO, sem valor eleitoral)
+After=network-pre.target
+Wants=network-pre.target
+
+[Service]
+Type=simple
+# Workdir do terminal (journal + hw-events.jsonl). Ajustar na instalação.
+WorkingDirectory=/var/lib/nexusvote-lab
+ExecStart=/usr/local/bin/nv-power-daemon /var/lib/nexusvote-lab
+Restart=always
+RestartSec=5
+# Sem privilégios além do necessário; workdir pertence ao usuário dedicado.
+User=nexusvote
+Group=nexusvote
+# Quiesce: saída 2 = energia crítica (não reiniciar em loop cego).
+RestartPreventExitStatus=2
+# Logs no journal do systemd; bordo de HW vai para hw-events.jsonl.
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

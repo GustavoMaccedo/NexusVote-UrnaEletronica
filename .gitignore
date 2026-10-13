@@ -1,0 +1,10 @@
+build/
+*.tmp
+lab-keys/
+test-tmp/
+local.properties
+.idea/
+*.iml
+rust/target/
+docs/
+*.md
