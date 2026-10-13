@@ -25,8 +25,7 @@ EOF
 rm -f "$OUT"
 zip -q -r "$OUT" artifacts/sbom.json artifacts/README.txt \
   overlays/nv-keypad-4x4.dts assets/sounds/confirma.wav assets/sounds/fim.wav \
-  systemd/ scripts/install-pi.sh scripts/install-keypad-overlay.sh scripts/test_hw_real.sh \
-  docs/hardware_fiacao.md docs/hardware_nv.md
+  systemd/ scripts/install-pi.sh scripts/install-keypad-overlay.sh scripts/test_hw_real.sh
 zip -q -j "$OUT" "$BUILD_DIR/build-info.json"
 [ -x "$BUILD_DIR/urna-pi" ] && zip -q -j "$OUT" "$BUILD_DIR/urna-pi"
 [ -x "$BUILD_DIR/nexusvote-cli" ] && zip -q -j "$OUT" "$BUILD_DIR/nexusvote-cli"

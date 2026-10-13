@@ -8,6 +8,6 @@
     {"name": "qt", "version": "6 (eglfs kiosk, opcional)", "license": "LGPL-3.0-only"},
     {"name": "rust", "version": "1.99.0", "license": "MIT OR Apache-2.0 (toolchain)"},
     {"name": "ed25519-dalek", "version": "3.0 (Cargo.lock)", "license": "BSD-3-Clause"},
-    {"name": "alsa-utils", "version": "aplay (som HDMI real)", "license": "GPL-2.0-or-later"}
+    {"name": "alsa-utils", "version": "aplay (som HDMI)", "license": "GPL-2.0-or-later"}
   ]
 }
