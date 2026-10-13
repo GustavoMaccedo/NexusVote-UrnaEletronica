@@ -8,7 +8,7 @@ ok() { PASS=$((PASS+1)); say "PASS $*"; }
 warn() { WARN=$((WARN+1)); say "WARN $*"; }
 fail() { FAIL=$((FAIL+1)); say "FAIL $*"; }
 
-say "== NexusVote Lab - teste de SO/hardware real (1.3.0-lab) =="
+say "== NexusVote Lab - teste de SO/hardware (1.3.0-lab) =="
 
 ARCH="$(uname -m)"
 case "$ARCH" in
