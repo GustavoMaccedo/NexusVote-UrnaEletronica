@@ -27,8 +27,8 @@ som via ALSA e piezo, driver ESC/POS cru para a impressora térmica e leitura
 de energia e relógio via sysfs. O display HDMI roda uma interface em Qt.
 
 Em 2025 resolvi atualizar o projeto todo: migrei o núcleo para C++20,
-troquei a placa pelo Raspberry Pi 4B e refiz impressão, sons e diário de
-bordo. Foi quase reescrever tudo, mas mantendo as ideias originais.
+troquei a placa (um Pi 3B+) pelo Raspberry Pi 4B e refiz impressão, sons e
+diário de bordo. Foi quase reescrever tudo, mas mantendo as ideias originais.
 
 A parte que mais me ensinou foi a integração no Raspberry Pi: subir o teclado
 matricial com device tree overlay, mapear os keycodes até a confirmação do
@@ -43,8 +43,9 @@ embarcados, Linux ou o tema de votação eletrônica na faculdade.
 
 ![Foto do protótipo físico](imgexp/urna-prototipo.jpg)
 
-Foto do terminal: display, teclado matricial 4x4 e teclas BRANCO, CORRIGE e
-CONFIRMA. O software deste repositório segue esse arranjo de teclas.
+Foto do terminal em 2025, quando atualizei o projeto: display, teclado
+matricial 4x4 e teclas BRANCO, CORRIGE e CONFIRMA. O software deste
+repositório segue esse arranjo de teclas.
 
 Montei esse terminal em 2018, no meu TCC. Anos depois, em 2025, resolvi
 atualizar o projeto: refiz o núcleo, o software do Pi e a impressão do
